@@ -5,13 +5,11 @@ const example = "In case I don't see you, good afternoon, good evening and good 
  * Reverses a string using a for loop
  */
 const forReverse = str => {
-    let newStr = ''
-
-    for (i = str.length; i >= 0; i--) {
-        newStr += str.charAt(i)
-    }
-
-    return newStr
+  let newStr = ''
+  for (i = str.length; i >= 0; i--) {
+    newStr += str.charAt(i)
+  }
+  return newStr
 }
 
 // Run and log the output
@@ -22,14 +20,14 @@ console.log("\nforReverse:", forOutput, "\n\n")
  * Reverses a string using reduce (beginner)
  */
 const reduceReverseBeginner = str => {
-    // Convert the string to an array
-    const letters = str.split('')
+  // Convert the string to an array
+  const letters = str.split('')
 
-    // Reduce the array
-    return letters.reduceRight((newSentence, letter, index) => {
-        console.log(`Adding letter "${letter}" from index: ${index}`)
-        return newSentence += letter
-    }, '')
+  // Reduce the array
+  return letters.reduceRight((newSentence, letter, index) => {
+    console.log(`Adding letter "${letter}" from index: ${index}`)
+    return newSentence += letter
+  }, '')
 }
 // Run and log the output - Uncomment to run
 // const reduceReverseBeginnerOutput = reduceReverseBeginner(example)
@@ -39,7 +37,7 @@ const reduceReverseBeginner = str => {
  * Reverses a string using reduce
  */
 const reduceReverse = str => {
-    return str.split('').reduceRight((sentence, letter) => sentence += letter)
+  return str.split('').reduceRight((sentence, letter) => sentence += letter)
 }
 
 // Run and log the output
@@ -50,13 +48,13 @@ console.log("reduceReverse:", reduceOutput, "\n\n")
  * Reverses individual words using reduceReverse (beginner)
  */
 const reduceWordsBeginner = str => {
-    // Convert the words to arrays
-    const words = str.split(' ')
+  // Convert the words to arrays
+  const words = str.split(' ')
 
-    return words.reduce((newSentence, word) => {
-        console.log(`Sending "${word}" to be reversed`)
-        return newSentence += reduceReverseBeginner(word) + ' '
-    }, '')
+  return words.reduce((newSentence, word) => {
+    console.log(`Sending "${word}" to be reversed`)
+    return newSentence += reduceReverseBeginner(word) + ' '
+  }, '')
 }
 // Run and log the output - Uncomment to run
 // const reduceWordsBeginnerOutput = reduceWordsBeginner(example)
@@ -66,8 +64,8 @@ const reduceWordsBeginner = str => {
  * Reverses individual words using reduceReverse
  */
 const reduceWords = str => {
-    return str.split(' ')
-        .reduce((newSentence, word) => newSentence += reduceReverse(word) + ' ', '')
+  return str.split(' ')
+    .reduce((newSentence, word) => newSentence += reduceReverse(word) + ' ', '')
 }
 
 // Run and log the output

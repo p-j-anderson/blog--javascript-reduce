@@ -1,17 +1,17 @@
+// Example people
 const people = [
-    { name: 'Brutus', age: 48 },
-    { name: 'Remus',  age: 26 },
-    { name: 'Pollux', age: 33 },
-    { name: 'Nero',   age: 17 }
+  { name: 'Brutus', age: 48 },
+  { name: 'Remus',  age: 26 },
+  { name: 'Pollux', age: 33 },
+  { name: 'Nero',   age: 17 }
 ]
 
 /**
- * Adjusts an array of objects to heroes
+ * Adjusts an array of people to heroes
  */
 const reduceMap = people.reduce((acc, cur) => {
-    const hero = { hero: cur.name, yearsYoung: cur.age }
-    acc.push(hero)
-    return acc
+  acc.push({ hero: cur.name, yearsYoung: cur.age })
+  return acc
 }, [])
 
 // Run and log the output

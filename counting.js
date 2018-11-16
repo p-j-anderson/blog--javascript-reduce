@@ -5,11 +5,11 @@ const numbers = [3, 4, 5]
  * Counts array values using a for loop
  */
 const forCount = numbersArr => {
-    let sum = 0
-    for (i = 0; i < numbersArr.length; i++) {
-        sum += numbersArr[i]
-    }
-    return sum
+  let sum = 0
+  for (i = 0; i < numbersArr.length; i++) {
+    sum += numbersArr[i]
+  }
+  return sum
 }
 
 // Run and log the output
@@ -21,9 +21,9 @@ console.log("\nforCount total:", total, "\n\n")
  */
 console.log('START reducing')
 const reduceLog = numbers.reduce((accumulator, current, index) => { 
-    console.log(`start loop ${index} | accumulator is:`, accumulator)
-    console.log(`add accumulator + current (${accumulator} + ${current})`)
-    return accumulator + current
+  console.log(`start loop ${index} | accumulator is:`, accumulator)
+  console.log(`add accumulator + current (${accumulator} + ${current})`)
+  return accumulator + current
 }, 0)
 
 // Log the output
