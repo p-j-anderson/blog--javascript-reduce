@@ -23,7 +23,7 @@ console.log("\nreduceOccurrencesBeginner:", reduceOccurrencesBeginner, "\n\n")
  * Count the occurrences of numbers
  */
 const reduceOccurrences = manyNumbers.reduce((acc, cur) => {
-  if (acc[cur] ? acc[cur]++ : acc[cur] = 1)
+  acc[cur] ? acc[cur]++ : acc[cur] = 1
   return acc
 }, {})
 
